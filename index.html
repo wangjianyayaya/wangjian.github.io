@@ -342,7 +342,7 @@
                 
               
 
-              <time title="创建时间：2018-12-17 15:23:45 / 修改时间：18:07:21" itemprop="dateCreated datePublished" datetime="2018-12-17T15:23:45+08:00">2018-12-17</time>
+              <time title="创建时间：2018-12-17 15:23:45 / 修改时间：18:13:26" itemprop="dateCreated datePublished" datetime="2018-12-17T15:23:45+08:00">2018-12-17</time>
             
 
             
@@ -389,9 +389,9 @@
 <p>​         QUIC 协议的主要目的，是为了整合 TCP 协议的可靠性和 UDP 协议的速度和效率。</p>
 <h2 id="特性："><a href="#特性：" class="headerlink" title="特性："></a><strong>特性：</strong></h2><h3 id="1-内置安全加密，减少握手时间，可实现0-RTT的握手过程"><a href="#1-内置安全加密，减少握手时间，可实现0-RTT的握手过程" class="headerlink" title="1.内置安全加密，减少握手时间，可实现0-RTT的握手过程"></a><strong>1.内置安全加密，减少握手时间，可实现0-RTT的握手过程</strong></h3><p>​        TCP 协议头部没有经过任何加密和认证，所以在传输过程中很容易被中间网络设备篡改，注入和窃听。但是 QUIC 的 packet 除了个别报文，所有报文头部都是经过认证的。只要对 QUIC 报文任何修改，接收端都能够及时发现，有效地降低了安全风险。</p>
 <p><img src="https://static001.infoq.cn/resource/image/99/28/990527acaef2cb0cd1b3da52bf08a928.png" alt="img"></p>
-<p>​                                                                  <strong>TCP+TLS1.3+HTTP2</strong></p>
+<p>​                                                                             <strong>TCP+TLS1.3+HTTP2</strong></p>
 <p><img src="https://static001.infoq.cn/resource/image/cb/53/cbccfb0eec8c8115137778e08ef36353.png" alt="img"></p>
-<p>​                                                                            <strong>QUIC</strong></p>
+<p>​                                                                                 <strong>QUIC</strong></p>
 <p>​        0 RTT 的效果是因为QUIC的客户端会缓存服务器端发的令牌和证书，当有数据需要再次发送的时候，客户端可以直接使用旧的令牌和证书，这样就实现了 0 RTT 了。当令牌失效或者没有缓存的情况下，QUIC还是需要一次握手才能开始传输数据。</p>
 <h3 id="2-改进的拥塞控制"><a href="#2-改进的拥塞控制" class="headerlink" title="2.改进的拥塞控制"></a>2.改进的拥塞控制</h3><p>​         QUIC 的拥塞控制主要实现了 TCP 的慢启动，拥塞避免，快重传，快恢复。在这些拥塞控制算法的基础上，再进行改进。</p>
 <p>​        <em>单调递增的 Packet Number：</em>  QUIC 是一个可靠的协议，它使用 Packet Number 代替了 TCP 的 sequence number，并且每个 Packet Number 都严格递增，也就是说就算 Packet N 丢失了，重传的 Packet N 的 Packet Number 已经不是 N，而是一个比 N 大的值。而 TCP 呢，重传 segment 的 sequence number 和原始的 segment 的 Sequence Number 保持不变，也正是由于这个特性，引入了 TCP 重传的歧义问题。</p>
