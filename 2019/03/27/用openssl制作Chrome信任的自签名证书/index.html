@@ -108,17 +108,17 @@
 
 
 
-  <meta name="description" content="系统：CentOS7    （自带openssl） 1. 使用openssl为ssl证书指定主题备用名称SAN(Subject Alternate Name),通过修改配置文件openssl.cnf实现 [root@localhost~] cd  /etc/pki/tls [root@localhost~] vim  openssl.cnf       # 确保req下存在以下2行（默认第一行是有">
+  <meta name="description" content="系统：CentOS7    （自带openssl） 1. 使用openssl为ssl证书指定主题备用名称SAN(Subject Alternate Name),通过修改配置文件openssl.cnf实现 [root@localhost~]# cd  /etc/pki/tls [root@localhost~]# vim  openssl.cnf       # 确保req下存在以下2行（默认第一行">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用openssl制作Chrome信任的自签名证书">
 <meta property="og:url" content="http://yoursite.com/2019/03/27/用openssl制作Chrome信任的自签名证书/index.html">
 <meta property="og:site_name" content="My Blog">
-<meta property="og:description" content="系统：CentOS7    （自带openssl） 1. 使用openssl为ssl证书指定主题备用名称SAN(Subject Alternate Name),通过修改配置文件openssl.cnf实现 [root@localhost~] cd  /etc/pki/tls [root@localhost~] vim  openssl.cnf       # 确保req下存在以下2行（默认第一行是有">
+<meta property="og:description" content="系统：CentOS7    （自带openssl） 1. 使用openssl为ssl证书指定主题备用名称SAN(Subject Alternate Name),通过修改配置文件openssl.cnf实现 [root@localhost~]# cd  /etc/pki/tls [root@localhost~]# vim  openssl.cnf       # 确保req下存在以下2行（默认第一行">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-27T08:47:21.544Z">
+<meta property="og:updated_time" content="2019-03-27T08:52:52.259Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用openssl制作Chrome信任的自签名证书">
-<meta name="twitter:description" content="系统：CentOS7    （自带openssl） 1. 使用openssl为ssl证书指定主题备用名称SAN(Subject Alternate Name),通过修改配置文件openssl.cnf实现 [root@localhost~] cd  /etc/pki/tls [root@localhost~] vim  openssl.cnf       # 确保req下存在以下2行（默认第一行是有">
+<meta name="twitter:description" content="系统：CentOS7    （自带openssl） 1. 使用openssl为ssl证书指定主题备用名称SAN(Subject Alternate Name),通过修改配置文件openssl.cnf实现 [root@localhost~]# cd  /etc/pki/tls [root@localhost~]# vim  openssl.cnf       # 确保req下存在以下2行（默认第一行">
 
 
 
@@ -342,7 +342,7 @@
                 
               
 
-              <time title="创建时间：2019-03-27 16:26:34 / 修改时间：16:47:21" itemprop="dateCreated datePublished" datetime="2019-03-27T16:26:34+08:00">2019-03-27</time>
+              <time title="创建时间：2019-03-27 16:26:34 / 修改时间：16:52:52" itemprop="dateCreated datePublished" datetime="2019-03-27T16:26:34+08:00">2019-03-27</time>
             
 
             
@@ -382,8 +382,8 @@
       
         <p>系统：CentOS7    （自带openssl）</p>
 <p><strong>1.</strong> <strong>使用openssl为ssl证书指定主题备用名称SAN(Subject Alternate Name),通过修改配置文件openssl.cnf实现</strong></p>
-<p>[root@localhost~] cd  /etc/pki/tls</p>
-<p>[root@localhost~] vim  openssl.cnf      </p>
+<p>[root@localhost~]# cd  /etc/pki/tls</p>
+<p>[root@localhost~]# vim  openssl.cnf      </p>
 <p># <strong>确保req下存在以下2行（默认第一行是有的，第2行被注释了）</strong><br>[ req ]<br>distinguished_name = req_distinguished_name<br>req_extensions = v3_req</p>
 <p># <strong>确保req_distinguished_name下没有 0.xxx 的标签，有的话把0.xxx的0. 去掉</strong><br>[ req_distinguished_name ]<br>countryName              = Country Name (2 letter code)<br>countryName_default = CN<br>stateOrProvinceName             = State or Province Name (full name)<br>stateOrProvinceName_default = ShangHai</p>
 <p>localityName              = Locality Name (eg, city)<br>localityName_default = ShangHai<br>organizationalUnitName             = Organizational Unit Name (eg, section)<br>organizationalUnitName_default = Domain Control Validated<br>commonName         = Internet Widgits Ltd<br>commonName_max = 64</p>
@@ -392,16 +392,16 @@
 <p>保存退出。</p>
 <p><strong>2. </strong> <strong>创建私有 CA ，然后用该 CA 给证书进行签名</strong></p>
 <p><em>（1）创建CA私钥</em></p>
-<p>[root@localhost~] openssl genrsa  -out ca.key 4096</p>
+<p>[root@localhost~]# openssl genrsa  -out ca.key 4096</p>
 <p><em>（2）使用配置文件生成 CA 的自签名证书</em></p>
-<p>[root@localhost~] openssl req -new -x509 -days 365 -key ca.key -out ca.crt.pem  -config  /etc/pki/tls/openssl.cnf</p>
+<p>[root@localhost~]# openssl req -new -x509 -days 365 -key ca.key -out ca.crt.pem  -config  /etc/pki/tls/openssl.cnf</p>
 <p><em>（3）生成需要颁发证书的私钥</em></p>
-<p>[root@localhost~] openssl genrsa  -out server.key.pem 4096</p>
+<p>[root@localhost~]# openssl genrsa  -out server.key.pem 4096</p>
 <p><em>（4）使用配置文件生成要颁发证书的证书签名请求</em></p>
-<p>[root@localhost~] openssl req -new -key server.key.pem -out server.csr  -config  /etc/pki/tls/openssl.cnf</p>
+<p>[root@localhost~]# openssl req -new -key server.key.pem -out server.csr  -config  /etc/pki/tls/openssl.cnf</p>
 <p><strong>Common Name 这个写主要域名就好了(注意：这个域名也要在openssl.cnf的DNS.x里)</strong></p>
 <p><em>（5）使用配置文件，用第二步创建的 CA 证书给第四步生成的签名请求进行签名</em></p>
-<p>openssl ca -in server.csr -out server.crt.pem -cert ca.crt.pem -keyfile ca.key -extensions v3_req -config /etc/pki/tls/openssl.cnf</p>
+<p>[root@localhost~]# openssl ca -in server.csr -out server.crt.pem -cert ca.crt.pem -keyfile ca.key -extensions v3_req -config /etc/pki/tls/openssl.cnf</p>
 <p><strong>3.</strong> <em>将生成的ca.crt.pem和server.crt.pem（这里我需要pem格式文件，如果不需要生成的时候可以直接生成crt格式文件）名称修改为ca.crt和server.crt添加到Chrome信任的证书里。</em></p>
 <p># <strong>生成证书时报错</strong></p>
 <p>Sign the certificate? [y/n]:y</p>
