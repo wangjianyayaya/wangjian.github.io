@@ -342,7 +342,7 @@
                 
               
 
-              <time title="创建时间：2019-04-01 10:40:34 / 修改时间：11:17:09" itemprop="dateCreated datePublished" datetime="2019-04-01T10:40:34+08:00">2019-04-01</time>
+              <time title="创建时间：2019-04-01 10:40:34 / 修改时间：11:18:52" itemprop="dateCreated datePublished" datetime="2019-04-01T10:40:34+08:00">2019-04-01</time>
             
 
             
@@ -399,7 +399,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">#cgo CFLAGS: -I./</span><br><span class="line">#cgo LDFLAGS: -L./ -lhello</span><br><span class="line">#include &quot;hello.h&quot; //非标准c头文件，所以用引号</span><br><span class="line">*/</span><br><span class="line">import &quot;C&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">    C.hello()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>CFLAGS中的-I（大写的i） 参数表示.h头文件所在的路径；</p>
 <p>LDFLAGS中的-L(大写的L) 表示.so文件所在的路径 -l(小写的L) 表示指定该路径下的库名称，比如要使用libhello.so，则只需用-lhello（省略了libhello.so中的lib和.so字符）；</p>
-<p>import “C”与上方字段（/<em> 和 </em>/ 之间）不能有空行，C需要大写。</p>
+<p>import “C”与上方字段（/<strong> 和 </strong>/ 之间）不能有空行，C需要大写。</p>
 </li>
 <li><p><strong>运行hello.go</strong></p>
 </li>
