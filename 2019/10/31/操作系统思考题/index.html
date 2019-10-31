@@ -108,20 +108,28 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="My Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="第一次思考题： 1，为什么计算机启动最开始的时候执行的是BIOS代码而不是操作系统自身的代码？    因为CPU只能运行内存中的程序，而在计算机启动最开始的时候，RAM中什么都没有，操作系统代码存放在软盘中，无法直接运行；BIOS代码的执行是靠硬件实现的，它被固化在计算机中的ROM芯片里。 2，为什么BIOS只加载了一个扇区，后续扇区却是由bootsect代码加载？为什么BIOS没有把所有需要加载">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统思考题">
+<meta property="og:url" content="http://yoursite.com/2019/10/31/操作系统思考题/index.html">
 <meta property="og:site_name" content="My Blog">
+<meta property="og:description" content="第一次思考题： 1，为什么计算机启动最开始的时候执行的是BIOS代码而不是操作系统自身的代码？    因为CPU只能运行内存中的程序，而在计算机启动最开始的时候，RAM中什么都没有，操作系统代码存放在软盘中，无法直接运行；BIOS代码的执行是靠硬件实现的，它被固化在计算机中的ROM芯片里。 2，为什么BIOS只加载了一个扇区，后续扇区却是由bootsect代码加载？为什么BIOS没有把所有需要加载">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="c:/Users/我的电脑/AppData/Roaming/Typora/typora-user-images/1571904362530.png">
+<meta property="og:image" content="c:/Users/我的电脑/AppData/Roaming/Typora/typora-user-images/1572108499756.png">
+<meta property="og:image" content="c:/Users/我的电脑/AppData/Roaming/Typora/typora-user-images/image-20191027194859638.png">
+<meta property="og:updated_time" content="2019-10-31T02:46:54.322Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My Blog">
+<meta name="twitter:title" content="操作系统思考题">
+<meta name="twitter:description" content="第一次思考题： 1，为什么计算机启动最开始的时候执行的是BIOS代码而不是操作系统自身的代码？    因为CPU只能运行内存中的程序，而在计算机启动最开始的时候，RAM中什么都没有，操作系统代码存放在软盘中，无法直接运行；BIOS代码的执行是靠硬件实现的，它被固化在计算机中的ROM芯片里。 2，为什么BIOS只加载了一个扇区，后续扇区却是由bootsect代码加载？为什么BIOS没有把所有需要加载">
+<meta name="twitter:image" content="c:/Users/我的电脑/AppData/Roaming/Typora/typora-user-images/1571904362530.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/31/操作系统思考题/">
 
 
 
@@ -131,7 +139,7 @@
   };
 </script>
 
-  <title>My Blog</title>
+  <title>操作系统思考题 | My Blog</title>
   
 
 
@@ -180,8 +188,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -218,7 +225,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -280,9 +287,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -314,10 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/10/31/操作系统思考题/" class="post-title-link" itemprop="http://yoursite.com/index.html">操作系统思考题</a>
+          <h1 class="post-title" itemprop="name headline">操作系统思考题
               
             
           </h1>
@@ -380,9 +384,7 @@
       
 
       
-        
-          
-            <p><strong>第一次思考题：</strong></p>
+        <p><strong>第一次思考题：</strong></p>
 <p><strong>1，为什么计算机启动最开始的时候执行的是BIOS代码而不是操作系统自身的代码？</strong></p>
 <p>   因为CPU只能运行内存中的程序，而在计算机启动最开始的时候，RAM中什么都没有，操作系统代码存放在软盘中，无法直接运行；BIOS代码的执行是靠硬件实现的，它被固化在计算机中的ROM芯片里。</p>
 <p><strong>2，为什么BIOS只加载了一个扇区，后续扇区却是由bootsect代码加载？为什么BIOS没有把所有需要加载的扇区都加载？</strong></p>
@@ -503,8 +505,6 @@
 <p>首先在task[64]中从后往前进行遍历，寻找进程状态为”就绪态“且时间片最大的进程作为下一个要执行的进程。通过调用switch_to（）函数跳转到指定进程。在此过程中，如果发现存在状态为就绪态的进程，但这些进程都没有时间片了，则会从后往前遍历所有进程重新分配时间片。然后重新执行以上步骤。如果在遍历过程中，没有发现处于就绪态的进程，则会跳转到进程0。</p>
 <p>在switch_to函数中，如果要跳转的目标进程就是当前进程，则不发生跳转。否则，保存当前进程信息，长跳转到目标进程。</p>
 
-          
-        
       
     </div>
 
@@ -527,170 +527,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/31/C语言里的那些不得不说的事情/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wang Jian">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/10/31/C语言里的那些不得不说的事情/" class="post-title-link" itemprop="http://yoursite.com/index.html">C语言里的那些不得不说的事情</a>
-              
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2019/10/31/C语言里的那些不得不说的事情/" rel="next" title="C语言里的那些不得不说的事情">
+                <i class="fa fa-chevron-left"></i> C语言里的那些不得不说的事情
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-31 00:19:52 / 修改时间：00:20:47" itemprop="dateCreated datePublished" datetime="2019-10-31T00:19:52+08:00">2019-10-31</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h3 id="1-二维数组作函数参数的烦恼"><a href="#1-二维数组作函数参数的烦恼" class="headerlink" title="1.二维数组作函数参数的烦恼"></a>1.二维数组作函数参数的烦恼</h3><p>在将二维数组作为函数参数的时候通常需要指定二维数组的列数，因为C语言中二维数组实际上是以一维数组的形式存储的，只有指定了列数，才能确定数组的行数。方法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void func（int arr[][3]）</span><br><span class="line"></span><br><span class="line">或者    void  func（int （* arr）[3]）</span><br></pre></td></tr></table></figure>
-<p>当n不是固定值时，方法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void func（int **arr, int m, int n）</span><br></pre></td></tr></table></figure>
-<p>但是，在函数func()中，需要以下面的方式表示arr[i] [j] (需要进行强制转换)。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">（int *）arr+i*n+m</span><br></pre></td></tr></table></figure>
-<h3 id="2-防不胜防而又不得不防的野指针"><a href="#2-防不胜防而又不得不防的野指针" class="headerlink" title="2.防不胜防而又不得不防的野指针"></a>2.防不胜防而又不得不防的野指针</h3><h5 id="产生原因："><a href="#产生原因：" class="headerlink" title="产生原因："></a>产生原因：</h5><p>（1）指针定义时未被初始化：指针被定义的时候，如果程序不对其进行初始化的话，它会指向随机区域，因为任何指针变量（除了static修饰的指针变量）在被定义的时候是不会被置空的，它的默认值是随机的。</p>
-<p>（2）指针被释放时没有被置空：我们在用malloc开辟内存空间时，要检查返回值是否为空，如果为空，则开辟失败；如果不为空，则指针指向的是开辟的内存空间的首地址。指针指向的内存空间在用free()释放后，如果程序员没有对其置空或者其他的赋值操作，就会使其成为一个野指针。</p>
-<p>（3）指针操作超越变量作用域：不要返回指向栈内存的指针，因为栈内存在函数结束的时候会被释放。</p>
-<h5 id="危害："><a href="#危害：" class="headerlink" title="危害："></a>危害：</h5><p>野指针的问题在于，指针指向的内存已经无效了，而指针没有被置空，解引用（“*”）一个非空的无效指针是一个未被定义的行为，也就是说不一定导致段错误，野指针很难定位到是哪里出现的问题，在哪里这个指针就失效了，不好查找出错的原因。所以调试起来会很麻烦，有时候会需要很长的时间。</p>
-<h5 id="养成良好的习惯："><a href="#养成良好的习惯：" class="headerlink" title="养成良好的习惯："></a>养成良好的习惯：</h5><p>（1）初始化指针时将其置为NULL，之后再对其进行操作。</p>
-<p><strong><em>特别注意的是，C语言中，如果一个指针变量的值为NULL，解引用这个指针时，会导致程序崩溃</em></strong>。</p>
-<p>在C语言中，NULL的定义为：（void  *）0，NULL的实质就是0，将指针赋初值为NULL，其实就是将指针指向0地址处。0地址是一个特殊地址，这个地址在一般的操作系统中都是不可被访问的，如果没按规章处理就会触发段错误。但实际上空指针是不等于野指针的。</p>
-<p>（2）在指针使用完时，将其置为NULL。</p>
-<p>说起好习惯，顺便补充一点，判断语句试着把 if（p == NULL）写成 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if（ NULL == p ）</span><br></pre></td></tr></table></figure>
-<p>以防把“==”写成“=”，编译器不会报错，错误很难检查出来。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -700,656 +558,15 @@
   </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/01/GO语言调用C语言动态库/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wang Jian">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/04/01/GO语言调用C语言动态库/" class="post-title-link" itemprop="http://yoursite.com/index.html">GO语言调用C语言动态库</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-01 10:40:34 / 修改时间：15:38:40" itemprop="dateCreated datePublished" datetime="2019-04-01T10:40:34+08:00">2019-04-01</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><strong>hello.c文件</strong></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">void hello() &#123;</span><br><span class="line">    printf(&quot;Hello World!\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li><strong>hello.h头文件</strong></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void hello();</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li><strong>编译生成libhello.so文件</strong></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc hello.c -fPIC -shared -o libhello.so</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li><p><strong>hello.go文件</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">#cgo CFLAGS: -I./</span><br><span class="line">#cgo LDFLAGS: -L./ -lhello</span><br><span class="line">#include &quot;hello.h&quot; //非标准c头文件，所以用引号</span><br><span class="line">*/</span><br><span class="line">import &quot;C&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">    C.hello()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>CFLAGS中的-I（大写的i） 参数表示.h头文件所在的路径；</p>
-<p>LDFLAGS中的-L(大写的L) 表示.so文件所在的路径 -l(小写的L) 表示指定该路径下的库名称，比如要使用libhello.so，则只需用-lhello（省略了libhello.so中的lib和.so字符）；</p>
-<p>import “C”与上方字段（/ 和 / 之间）不能有空行，C需要大写。</p>
-</li>
-<li><p><strong>运行hello.go</strong></p>
-</li>
-</ol>
-<p>​    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go run  hello.go</span><br></pre></td></tr></table></figure>
-<p>#<strong>遇到的问题：</strong></p>
-<p> error while loading shared libraries: libhello.so: cannot open shared object file: No such file or directory</p>
-<p>#<strong>解决办法：</strong></p>
-<p>1) 如果共享库文件安装到了/lib或/usr/lib目录下, 那么需执行一下ldconfig命令（ldconfig命令的用途, 主要是在默认搜寻目录(/lib和/usr/lib)以及动态库配置文件/etc/ld.so.conf内所列的目录下, 搜索出可共享的动态链接库(格式如lib<em>.so</em>), 进而创建出动态装入程序(ld.so)所需的连接和缓存文件. 缓存文件默认为/etc/ld.so.cache, 此文件保存已排好序的动态链接库名字列表）。</p>
-<p>2) 如果共享库文件安装到了/usr/local/lib(很多开源的共享库都会安装到该目录下)或其它”非/lib或/usr/lib”目录下, 那么在执行ldconfig命令前, 还要把新共享库目录加入到共享库配置文件/etc/ld.so.conf中, 如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># cat  /etc/ld.so.conf</span><br><span class="line"></span><br><span class="line">include ld.so.conf.d/*.conf</span><br><span class="line"></span><br><span class="line"># echo  &quot;/usr/local/lib&quot; &gt;&gt; /etc/ld.so.conf</span><br><span class="line"></span><br><span class="line"># ldconfig</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/27/用openssl制作Chrome信任的自签名证书/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wang Jian">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/27/用openssl制作Chrome信任的自签名证书/" class="post-title-link" itemprop="http://yoursite.com/index.html">用openssl制作Chrome信任的自签名证书</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-27 16:26:34 / 修改时间：16:52:52" itemprop="dateCreated datePublished" datetime="2019-03-27T16:26:34+08:00">2019-03-27</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>系统：CentOS7    （自带openssl）</p>
-<p><strong>1.</strong> <strong>使用openssl为ssl证书指定主题备用名称SAN(Subject Alternate Name),通过修改配置文件openssl.cnf实现</strong></p>
-<p>[root@localhost~]# cd  /etc/pki/tls</p>
-<p>[root@localhost~]# vim  openssl.cnf      </p>
-<p># <strong>确保req下存在以下2行（默认第一行是有的，第2行被注释了）</strong><br>[ req ]<br>distinguished_name = req_distinguished_name<br>req_extensions = v3_req</p>
-<p># <strong>确保req_distinguished_name下没有 0.xxx 的标签，有的话把0.xxx的0. 去掉</strong><br>[ req_distinguished_name ]<br>countryName              = Country Name (2 letter code)<br>countryName_default = CN<br>stateOrProvinceName             = State or Province Name (full name)<br>stateOrProvinceName_default = ShangHai</p>
-<p>localityName              = Locality Name (eg, city)<br>localityName_default = ShangHai<br>organizationalUnitName             = Organizational Unit Name (eg, section)<br>organizationalUnitName_default = Domain Control Validated<br>commonName         = Internet Widgits Ltd<br>commonName_max = 64</p>
-<p># <strong>新增最后一行内容 subjectAltName = @alt_names（前2行默认存在）</strong><br>[ v3_req ]<br># Extensions to add to a certificate request<br>basicConstraints = CA:FALSE<br>keyUsage = nonRepudiation, digitalSignature, keyEncipherment<br>subjectAltName = @alt_names</p>
-<p># <strong>新增 alt_names,注意括号前后的空格，DNS.x 的数量可以自己加</strong><br>[ alt_names ]<br>DNS.1 = abc.example.com<br>DNS.2 = dfe.example.org<br>DNS.3 = ex.abcexpale.net</p>
-<p>保存退出。</p>
-<p><strong>2. </strong> <strong>创建私有 CA ，然后用该 CA 给证书进行签名</strong></p>
-<p><em>（1）创建CA私钥</em></p>
-<p>[root@localhost~]# openssl genrsa  -out ca.key 4096</p>
-<p><em>（2）使用配置文件生成 CA 的自签名证书</em></p>
-<p>[root@localhost~]# openssl req -new -x509 -days 365 -key ca.key -out ca.crt.pem  -config  /etc/pki/tls/openssl.cnf</p>
-<p><em>（3）生成需要颁发证书的私钥</em></p>
-<p>[root@localhost~]# openssl genrsa  -out server.key.pem 4096</p>
-<p><em>（4）使用配置文件生成要颁发证书的证书签名请求</em></p>
-<p>[root@localhost~]# openssl req -new -key server.key.pem -out server.csr  -config  /etc/pki/tls/openssl.cnf</p>
-<p><strong>Common Name 这个写主要域名就好了(注意：这个域名也要在openssl.cnf的DNS.x里)</strong></p>
-<p><em>（5）使用配置文件，用第二步创建的 CA 证书给第四步生成的签名请求进行签名</em></p>
-<p>[root@localhost~]# openssl ca -in server.csr -out server.crt.pem -cert ca.crt.pem -keyfile ca.key -extensions v3_req -config /etc/pki/tls/openssl.cnf</p>
-<p><strong>3.</strong> <em>将生成的ca.crt.pem和server.crt.pem（这里我需要pem格式文件，如果不需要生成的时候可以直接生成crt格式文件）名称修改为ca.crt和server.crt添加到Chrome信任的证书里。</em></p>
-<p># <strong>生成证书时报错</strong></p>
-<p>Sign the certificate? [y/n]:y</p>
-<p>failed to update database<br>TXT_DB error number 2</p>
-<p># <strong>产生的原因</strong></p>
-<p> This thing happens when certificates share common data. You cannot have two<br>certificates that look otherwise the same.</p>
-<p> # <strong>解决办法</strong><br>​    1.文本打开修改index.txt.attr<br>​    修改unique_subject = yes为unique_subject = no    </p>
-<p>​     2.文本打开index.txt<br>​     删除之前生成的证书内容 </p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/17/好记性不如烂笔头之QUIC学习笔记/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wang Jian">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/12/17/好记性不如烂笔头之QUIC学习笔记/" class="post-title-link" itemprop="http://yoursite.com/index.html">好记性不如烂笔头之QUIC学习笔记</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-12-17 15:23:45 / 修改时间：18:13:26" itemprop="dateCreated datePublished" datetime="2018-12-17T15:23:45+08:00">2018-12-17</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>​        QUIC（Quick  UDP  Internet  Connections），最早由Google提出（gQUIC），后交由IETF进一步发展（iQUIC），在 2018 年  11 月 8 日的 IETF-103 HTTPbis 会议上确认 iQUIC新名称是 HTTP／3。HTTP／3 就是使用 QUIC 进行传输的新 HTTP 版本！</p>
-<p>​       <img src="https://blog.cloudflare.com/content/images/2018/07/QUIC-Badge-Dark-RGB-Horiz.png" alt="QUIC-Badge-Dark-RGB-Horiz"></p>
-<h2 id="产生背景："><a href="#产生背景：" class="headerlink" title="产生背景："></a><strong>产生背景：</strong></h2><p>​        <em>TCP的瓶颈：</em>  TCP由于基于操作系统内核实现，发展速度极慢，现有的TCP Fast Open实现等等虽然早已存在于标准中但是实际应用情况及其落后，即便除非所有机器的操作系统都更新到最新，否则考虑到兼容性不太可能大范围采用新技术。QUIC直接基于客户端实现，而非基于系统内核，可以进行快速迭代更新，不需要操作系统内核层面的更改。</p>
-<p>​         <em>HTTP2.0队头阻塞：</em>   虽然实现了多路复用，但也因此出现了队头阻塞的问题。而队头阻塞主要是 TCP 协议的可靠性机制引入的。TCP 使用序列号来标识数据的顺序，数据必须按照顺序处理，如果前面的数据丢失，后面的数据就算到达了也不会通知应用层来处理。</p>
-<p>​         QUIC 协议的主要目的，是为了整合 TCP 协议的可靠性和 UDP 协议的速度和效率。</p>
-<h2 id="特性："><a href="#特性：" class="headerlink" title="特性："></a><strong>特性：</strong></h2><h3 id="1-内置安全加密，减少握手时间，可实现0-RTT的握手过程"><a href="#1-内置安全加密，减少握手时间，可实现0-RTT的握手过程" class="headerlink" title="1.内置安全加密，减少握手时间，可实现0-RTT的握手过程"></a><strong>1.内置安全加密，减少握手时间，可实现0-RTT的握手过程</strong></h3><p>​        TCP 协议头部没有经过任何加密和认证，所以在传输过程中很容易被中间网络设备篡改，注入和窃听。但是 QUIC 的 packet 除了个别报文，所有报文头部都是经过认证的。只要对 QUIC 报文任何修改，接收端都能够及时发现，有效地降低了安全风险。</p>
-<p><img src="https://static001.infoq.cn/resource/image/99/28/990527acaef2cb0cd1b3da52bf08a928.png" alt="img"></p>
-<p>​                                                                             <strong>TCP+TLS1.3+HTTP2</strong></p>
-<p><img src="https://static001.infoq.cn/resource/image/cb/53/cbccfb0eec8c8115137778e08ef36353.png" alt="img"></p>
-<p>​                                                                                 <strong>QUIC</strong></p>
-<p>​        0 RTT 的效果是因为QUIC的客户端会缓存服务器端发的令牌和证书，当有数据需要再次发送的时候，客户端可以直接使用旧的令牌和证书，这样就实现了 0 RTT 了。当令牌失效或者没有缓存的情况下，QUIC还是需要一次握手才能开始传输数据。</p>
-<h3 id="2-改进的拥塞控制"><a href="#2-改进的拥塞控制" class="headerlink" title="2.改进的拥塞控制"></a>2.改进的拥塞控制</h3><p>​         QUIC 的拥塞控制主要实现了 TCP 的慢启动，拥塞避免，快重传，快恢复。在这些拥塞控制算法的基础上，再进行改进。</p>
-<p>​        <em>单调递增的 Packet Number：</em>  QUIC 是一个可靠的协议，它使用 Packet Number 代替了 TCP 的 sequence number，并且每个 Packet Number 都严格递增，也就是说就算 Packet N 丢失了，重传的 Packet N 的 Packet Number 已经不是 N，而是一个比 N 大的值。而 TCP 呢，重传 segment 的 sequence number 和原始的 segment 的 Sequence Number 保持不变，也正是由于这个特性，引入了 TCP 重传的歧义问题。</p>
-<p>​         <img src="https://pic2.zhimg.com/v2-8db4c3c378edaac0060b4238e3554091_r.jpg" alt="preview"></p>
-<p>​                                                                   <strong>TCP重传歧义</strong></p>
-<p><img src="https://pic2.zhimg.com/v2-086cc0ac3b95eb5bfe84a2d87bb2a645_r.jpg" alt="preview"></p>
-<p>​                                                                        <strong>QUIC重传没有歧义</strong></p>
-<p>​        而重传歧义会导致采样RRT的计算出现问题。</p>
-<h3 id="3-没有队头阻塞的多路复用"><a href="#3-没有队头阻塞的多路复用" class="headerlink" title="3.没有队头阻塞的多路复用"></a><strong>3.没有队头阻塞的多路复用</strong></h3><p>​         QUIC 的多路复用和 HTTP2 类似。在一条 QUIC 连接上可以并发发送多个 HTTP 请求 (stream)。但是 QUIC 的多路复用相比 HTTP2 有一个很大的优势。</p>
-<p>​         QUIC 因为是基于UDP的协议，一个连接上的多个 stream 之间没有依赖。这样假如 stream2 丢了一个 udp packet，也只会影响 stream2 的处理。不会影响 stream2 之前及之后的 stream 的处理。</p>
-<h3 id="4-前向纠错"><a href="#4-前向纠错" class="headerlink" title="4.前向纠错"></a><strong>4.前向纠错</strong></h3><p>​        QUIC使用了FEC(前向纠错码)来恢复数据，FEC采用简单异或的方式。前向纠错牺牲了每个数据包可以发送数据的上限，但是减少了因为丢包导致的数据重传，因为数据重传将会消耗更多的时间。</p>
-<h3 id="5-连接迁移"><a href="#5-连接迁移" class="headerlink" title="5.连接迁移"></a><strong>5.连接迁移</strong></h3><p>​        一条 TCP 连接是由四元组标识的（源 IP，源端口，目的 IP，目的端口）。当我们使用手机在 WIFI 和 4G 移动网络切换时，客户端的 IP 肯定会发生变化，就需要重新建立和服务端的 TCP 连接。而 QUIC 连接不再以 IP 及端口四元组标识，而是以一个 64 位的随机数作为Connection ID 来标识，这样就算 IP 或者端口发生变化时，只要Connection ID 不变，这条连接依然维持着，上层业务逻辑感知不到变化，也不需要重连。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/你好/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wang Jian">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/12/05/你好/" class="post-title-link" itemprop="http://yoursite.com/index.html">你好</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-12-05 15:46:49" itemprop="dateCreated datePublished" datetime="2018-12-05T15:46:49+08:00">2018-12-05</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -1552,6 +769,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
+
+
 
   
 
