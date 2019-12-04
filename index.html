@@ -382,7 +382,7 @@
       
         
           
-            <h1 id="程序的机器级表示"><a href="#程序的机器级表示" class="headerlink" title="程序的机器级表示"></a>程序的机器级表示</h1><h3 id="1-x86-64-16个存储64位值的通用目的寄存器。"><a href="#1-x86-64-16个存储64位值的通用目的寄存器。" class="headerlink" title="1.x86-64:16个存储64位值的通用目的寄存器。"></a>1.x86-64:16个存储64位值的通用目的寄存器。</h3><p><img src="/.com//4-1.png" alt="4-1"></p>
+            <h1 id="程序的机器级表示"><a href="#程序的机器级表示" class="headerlink" title="程序的机器级表示"></a>程序的机器级表示</h1><h3 id="1-x86-64-16个存储64位值的通用目的寄存器。"><a href="#1-x86-64-16个存储64位值的通用目的寄存器。" class="headerlink" title="1.x86-64:16个存储64位值的通用目的寄存器。"></a>1.x86-64:16个存储64位值的通用目的寄存器。</h3><p><img src="//yoursite.com/2019/12/04/深入理解计算机系统-4/4-1.png" alt="4-1"></p>
 <h3 id="2-操作数格式"><a href="#2-操作数格式" class="headerlink" title="2.操作数格式"></a>2.操作数格式</h3><p><img src="/images/深入理解计算机系统-4/4-2.png" alt="4-2"></p>
 <h3 id="3-数据传送指令—-MOV类"><a href="#3-数据传送指令—-MOV类" class="headerlink" title="3.数据传送指令—-MOV类"></a>3.数据传送指令—-MOV类</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//C语言代码</span></span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="title">exchange</span><span class="params">(<span class="keyword">long</span> *xp,<span class="keyword">long</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">     <span class="keyword">long</span> x =*xp;</span><br><span class="line">     *xp = y;</span><br><span class="line">     <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//汇编代码</span><br><span class="line">// mov S,D</span><br><span class="line">exchange:</span><br><span class="line">    movq (%rdi),%rax</span><br><span class="line">    movq %rsi,(%rdi)</span><br><span class="line">    ret</span><br></pre></td></tr></table></figure>
@@ -948,7 +948,7 @@
 </ol>
 <p>​         </p>
 <h3 id="1-4-处理器读并解释储存在内存中的指令"><a href="#1-4-处理器读并解释储存在内存中的指令" class="headerlink" title="1.4 处理器读并解释储存在内存中的指令"></a>1.4 处理器读并解释储存在内存中的指令</h3><p>shell是一个命令行解释器，它输出一个提示符，等待输入一个命令行，然后执行这个命令。如果该命令行的第一个单词不是一个内置的shell命令，那么shell就会假设这是一个可执行文件的名字，它将加载并运行这个文件。</p>
-<h4 id="1-4-1-系统的硬件组成"><a href="#1-4-1-系统的硬件组成" class="headerlink" title="1.4.1 系统的硬件组成"></a>1.4.1 系统的硬件组成</h4><p><img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-3" alt="img"></p>
+<h4 id="1-4-1-系统的硬件组成"><a href="#1-4-1-系统的硬件组成" class="headerlink" title="1.4.1 系统的硬件组成"></a>1.4.1 系统的硬件组成</h4><p><img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-3" alt="img"></p>
 <ol>
 <li><p><em>总线</em>：贯穿整个系统的是一组电子管道，称作总线，它携带信息字节并负责在各个部件间传递。通常总线被设计成传送定长的字节块，也就是字（word）。字中的字节数（即字长）是一个基本的系统参数，各个系统中不尽相同，现在大多数机器字长是4个字节（32位）或者8个字节（64位）。</p>
 </li>
@@ -961,39 +961,39 @@
 <p>ALU计算新的数据和地址值。</p>
 </li>
 </ol>
-<h4 id="1-4-2-运行hello程序"><a href="#1-4-2-运行hello程序" class="headerlink" title="1.4.2 运行hello程序"></a>1.4.2 运行hello程序</h4><p><img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-4.png" alt="1-4"></p>
+<h4 id="1-4-2-运行hello程序"><a href="#1-4-2-运行hello程序" class="headerlink" title="1.4.2 运行hello程序"></a>1.4.2 运行hello程序</h4><p><img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-4.png" alt="1-4"></p>
 <ol>
 <li>shell程序执行它的指令，等待我们输入一个命令。当我们在键盘上输入字符串“./hello”后，shell程序将字符逐一读入寄存器，再把它存放到内存中。</li>
 </ol>
-<p><img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-5.png" alt="1-5"></p>
+<p><img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-5.png" alt="1-5"></p>
 <ol start="2">
 <li>当我们在键盘上敲回车键时，shell程序就知道我们已经结束了命令的输入。shell执行一系列指令加载可执行的hello文件，这些指令将hello目标文件的代码和数据从磁盘复制到主存。利用<em>直接存储器存取</em> 技术，数据可以不通过CPU直接从磁盘到达主存。</li>
 </ol>
-<p><img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-6.png" alt="1-6"></p>
+<p><img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-6.png" alt="1-6"></p>
 <ol start="3">
 <li>CPU开始执行hello程序main函数中的机器语言指令，这些指令将要输出的字符串复制到寄存器文件，再从寄存器文件复制到显示设备，最终显示在屏幕上。</li>
 </ol>
-<h3 id="1-5-高速缓存至关重要"><a href="#1-5-高速缓存至关重要" class="headerlink" title="1.5 高速缓存至关重要"></a>1.5 高速缓存至关重要</h3><p><img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-7.png" alt="1-7"></p>
+<h3 id="1-5-高速缓存至关重要"><a href="#1-5-高速缓存至关重要" class="headerlink" title="1.5 高速缓存至关重要"></a>1.5 高速缓存至关重要</h3><p><img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-7.png" alt="1-7"></p>
 <p>根据机械原理，较大的存储设备要比较小的存储设备运行的慢，而快速设备的造价远高于同类的低速设备。</p>
 <p>在处理器和一个较大较慢的设备（例如主存）之间插入一个更小更快的存储设备，存放可能经常访问的数据。</p>
-<h3 id="1-6-存储设备形成层次结构"><a href="#1-6-存储设备形成层次结构" class="headerlink" title="1.6 存储设备形成层次结构"></a>1.6 存储设备形成层次结构</h3><p><img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-8" alt="ae3cb3d12890-8"></p>
+<h3 id="1-6-存储设备形成层次结构"><a href="#1-6-存储设备形成层次结构" class="headerlink" title="1.6 存储设备形成层次结构"></a>1.6 存储设备形成层次结构</h3><p><img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-8" alt="ae3cb3d12890-8"></p>
 <p>存储器层次结构的主要思想是上一层的存储器作为低一层存储器的高速缓存。</p>
-<h3 id="1-7-操作系统管理硬件"><a href="#1-7-操作系统管理硬件" class="headerlink" title="1.7 操作系统管理硬件"></a>1.7 操作系统管理硬件</h3><p><img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-9.png" alt="1-9"></p>
+<h3 id="1-7-操作系统管理硬件"><a href="#1-7-操作系统管理硬件" class="headerlink" title="1.7 操作系统管理硬件"></a>1.7 操作系统管理硬件</h3><p><img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-9.png" alt="1-9"></p>
 <p>所有应用程序对硬件的操作尝试都必须通过操作系统。</p>
 <p>操作系统有两个基本功能：</p>
 <p>（1）防止硬件被失控的应用程序滥用；</p>
 <p>（2）向应用程序提供简单一致的机制来控制复杂而又通常大不相同的低级硬件设备。</p>
-<p><img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-10.png" alt="1-10"></p>
+<p><img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-10.png" alt="1-10"></p>
 <h4 id="1-7-1-进程"><a href="#1-7-1-进程" class="headerlink" title="1.7.1 进程"></a>1.7.1 进程</h4><p>（1）进程是操作系统对一个正在运行的程序的一种抽象。</p>
 <p>（2）并发运行，是说一个进程的指令和另一个进程的指令是交错执行的。</p>
 <p>（3）在任何一个时刻，单处理器系统都只能执行一个进程的代码。</p>
 <p>（4）操作系统通过进程切换实现交错执行的机制称为上下文切换。操作系统保持跟踪进程运行所需的所有状态信息就是上下文（比如PC和寄存器文件的当前值，以及主存的内容）。进行上下文切换时，需要保存当前进程的上下文，恢复新进程的上下文，新进程就会从它上次停止的地方开始。</p>
-<p><img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-11.png" alt="1-11"></p>
+<p><img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-11.png" alt="1-11"></p>
 <p>​                                            进程A：shell进程           进程B：hello进程</p>
 <p>（5）从一个进程到另一个进程的转换是由操作系统内核管理的。当应用程序需要操作系统的某些操作时，它就需要执行系统调用（system call）指令，将控制权传递给内核。</p>
 <p>​    内核不是一个独立的进程，它是系统管理全部进程所用代码和数据结构的集合。</p>
 <h4 id="1-7-2-线程"><a href="#1-7-2-线程" class="headerlink" title="1.7.2 线程"></a>1.7.2 线程</h4><p>在现代系统中，一个进程实际上可以由多个称为线程的执行单元组成，每个线程都运行在进程的上下文中，并共享同样的代码和全局数据。</p>
-<h4 id="1-7-3-虚拟内存"><a href="#1-7-3-虚拟内存" class="headerlink" title="1.7.3 虚拟内存"></a>1.7.3 虚拟内存</h4><p><img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-12.png" alt="image"></p>
+<h4 id="1-7-3-虚拟内存"><a href="#1-7-3-虚拟内存" class="headerlink" title="1.7.3 虚拟内存"></a>1.7.3 虚拟内存</h4><p><img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-12.png" alt="image"></p>
 <ol>
 <li><p>虚拟内存使得应用程序认为它拥有连续的可用的内存（一个连续完整的地址空间），而实际上，它通常是被分隔成多个物理内存碎片。</p>
 </li>
@@ -1002,8 +1002,8 @@
 <li>虚拟地址空间可以大于物理地址空间。可以多个虚拟地址映射到同一物理地址，多为共享库。</li>
 </ol>
 <h4 id="1-7-4-文件"><a href="#1-7-4-文件" class="headerlink" title="1.7.4 文件"></a>1.7.4 文件</h4><p>文件就是字节序列。<em>每个I/O设备，甚至网络，都可以看成文件</em>。</p>
-<h3 id="1-8-系统之间通过网络通信"><a href="#1-8-系统之间通过网络通信" class="headerlink" title="1.8 系统之间通过网络通信"></a>1.8 系统之间通过网络通信</h3><p><img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-13" alt="clipboard.png"></p>
-<p><img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-14" alt="img"></p>
+<h3 id="1-8-系统之间通过网络通信"><a href="#1-8-系统之间通过网络通信" class="headerlink" title="1.8 系统之间通过网络通信"></a>1.8 系统之间通过网络通信</h3><p><img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-13" alt="clipboard.png"></p>
+<p><img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-14" alt="img"></p>
 <h3 id="1-9-重要主题"><a href="#1-9-重要主题" class="headerlink" title="1.9 重要主题"></a>1.9 重要主题</h3><h4 id="1-9-1-Amdahl定律"><a href="#1-9-1-Amdahl定律" class="headerlink" title="1.9.1 Amdahl定律"></a>1.9.1 Amdahl定律</h4><ol>
 <li>当我们对系统的某个部分加速时，其对系统整体性能的影响取决于该部分的重要性和加速程度。</li>
 </ol>
@@ -1016,8 +1016,8 @@
 <ol>
 <li>线程级并发</li>
 </ol>
-<p>​                  <img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-15" alt="img"></p>
-<p><img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-16" alt="img"></p>
+<p>​                  <img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-15" alt="img"></p>
+<p><img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-16" alt="img"></p>
 <p>超线程，有时称为同时多线程，是一项允许一个CPU执行多个控制流的技术。</p>
 <ol start="2">
 <li>指令级并行</li>
@@ -1028,7 +1028,7 @@
 <li>单指令、多数据并行（SIMD并行）</li>
 </ol>
 <p>允许一条指令产生多个可以并行执行的操作就称之为SIMD并行。</p>
-<h4 id="1-9-3-计算机系统中抽象的重要性"><a href="#1-9-3-计算机系统中抽象的重要性" class="headerlink" title="1.9.3 计算机系统中抽象的重要性"></a>1.9.3 计算机系统中抽象的重要性</h4><p><img src="/.com//blog\source\_posts\深入理解计算机系统-1\1-17" alt="img"></p>
+<h4 id="1-9-3-计算机系统中抽象的重要性"><a href="#1-9-3-计算机系统中抽象的重要性" class="headerlink" title="1.9.3 计算机系统中抽象的重要性"></a>1.9.3 计算机系统中抽象的重要性</h4><p><img src="//yoursite.com/2019/10/31/深入理解计算机系统-1/blog\source\_posts\深入理解计算机系统-1\1-17" alt="img"></p>
 
           
         
@@ -1203,7 +1203,7 @@
 <p><strong>10，为什么不用call，而是用ret“调用”main函数？画出调用路线图，给出代码证据。</strong></p>
 <p>call指令会将EIP的值自动压栈，保护返回现场，然后执行被调函数的程序。等到执行被调函数的ret指令时，自动出栈给EIP并还原现场，继续执行call的下一条指令。</p>
 <p>但是对于操作系统的main函数来说，如果通过call调用了main函数，因为操作系统已经是最底层的系统了，那么ret返回的时候逻辑上就说不通了；所以，操作系统采用了手动编写代码压栈和跳转，用ret实现调用main函数的方式。</p>
-<p><img src="/.com//Users\我的电脑\AppData\Roaming\Typora\typora-user-images\1571904362530.png" alt="1571904362530"></p>
+<p><img src="//yoursite.com/2019/10/31/操作系统思考题/Users\我的电脑\AppData\Roaming\Typora\typora-user-images\1571904362530.png" alt="1571904362530"></p>
 <p>代码如下：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">after_page_tables:</span><br><span class="line">    pushl $<span class="number">0</span>  </span><br><span class="line">    pushl $<span class="number">0</span> </span><br><span class="line">    pushl $<span class="number">0</span> </span><br><span class="line">    pushl $L6 </span><br><span class="line">    pushl $_main </span><br><span class="line">    jmp setup_paging </span><br><span class="line"> </span><br><span class="line">setup_paging:</span><br><span class="line">    ...</span><br><span class="line">    ret</span><br></pre></td></tr></table></figure>
 <p>注意：压栈的EIP值是main函数的入口地址_main。</p>
@@ -1247,7 +1247,7 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">trap_init</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line"></span><br><span class="line">	set_trap_gate(<span class="number">0</span>,&amp;divide_error); <span class="comment">// 设置除零错误的中断向量,以下雷同。</span></span><br><span class="line">	set_trap_gate(<span class="number">1</span>,&amp;debug);</span><br><span class="line">	set_trap_gate(<span class="number">2</span>,&amp;nmi);</span><br><span class="line">	set_system_gate(<span class="number">3</span>,&amp;int3);	<span class="comment">/* int3-5 can be called from all */</span></span><br><span class="line">	set_system_gate(<span class="number">4</span>,&amp;overflow);</span><br><span class="line">	set_system_gate(<span class="number">5</span>,&amp;bounds);</span><br><span class="line">	set_trap_gate(<span class="number">6</span>,&amp;invalid_op);</span><br><span class="line">	set_trap_gate(<span class="number">7</span>,&amp;device_not_available);</span><br><span class="line">	set_trap_gate(<span class="number">8</span>,&amp;double_fault);</span><br><span class="line">	set_trap_gate(<span class="number">9</span>,&amp;coprocessor_segment_overrun);</span><br><span class="line">	set_trap_gate(<span class="number">10</span>,&amp;invalid_TSS);</span><br><span class="line">	set_trap_gate(<span class="number">11</span>,&amp;segment_not_present);</span><br><span class="line">	set_trap_gate(<span class="number">12</span>,&amp;stack_segment);</span><br><span class="line">	set_trap_gate(<span class="number">13</span>,&amp;general_protection);</span><br><span class="line">	set_trap_gate(<span class="number">14</span>,&amp;page_fault);</span><br><span class="line">	set_trap_gate(<span class="number">15</span>,&amp;reserved);</span><br><span class="line">	set_trap_gate(<span class="number">16</span>,&amp;coprocessor_error);</span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">17</span>;i&lt;<span class="number">48</span>;i++)<span class="comment">//先均设置为reserved，以后每个硬件初始化时会重新设置</span></span><br><span class="line">		set_trap_gate(i,&amp;reserved);</span><br><span class="line">	set_trap_gate(<span class="number">45</span>,&amp;irq13);<span class="comment">// 协处理器</span></span><br><span class="line">	outb_p(inb_p(<span class="number">0x21</span>)&amp;<span class="number">0xfb</span>,<span class="number">0x21</span>);<span class="comment">//允许IRQ2中断请求</span></span><br><span class="line">	outb(inb_p(<span class="number">0xA1</span>)&amp;<span class="number">0xdf</span>,<span class="number">0xA1</span>);<span class="comment">//允许IRQ13中断请求</span></span><br><span class="line">	set_trap_gate(<span class="number">39</span>,&amp;parallel_interrupt);并口</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>（2）初始化GDT：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//成对初始化TSSi、LDTi</span></span><br><span class="line">  set_tss_desc(gdt+FIRST_TSS_ENTRY,&amp;(init_task.task.tss));</span><br><span class="line">set_ldt_desc(gdt+FIRST_LDT_ENTRY,&amp;(init_task.task.ldt));</span><br><span class="line">p = gdt+<span class="number">2</span>+FIRST_TSS_ENTRY;</span><br></pre></td></tr></table></figure>
-<p><img src="/.com//Users\我的电脑\AppData\Roaming\Typora\typora-user-images\1572108499756.png" alt="1572108499756"></p>
+<p><img src="//yoursite.com/2019/10/31/操作系统思考题/Users\我的电脑\AppData\Roaming\Typora\typora-user-images\1572108499756.png" alt="1572108499756"></p>
 <p>（3）初始化LDT：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set_ldt_desc(gdt+FIRST_LDT_ENTRY,&amp;(init_task.task.ldt));</span><br></pre></td></tr></table></figure>
 <p><strong>7、在sched_init(void)函数中有这样的代码：C</strong><br><strong>for(i=1;i&lt;NR_TASKS;i++) {</strong><br>    <strong>task[i] = NULL;</strong><br>    <strong>……</strong><br><strong>但并未涉及task[0]，从后续代码能感觉到已经给了进程0，请给出代码证据。</strong></p>
@@ -1282,7 +1282,7 @@
 <p>（1）第一次执行fork代码：当执行“int 0x80“中断后，压栈的EIP就是当前指令的下一行，即”if（_res &gt;= 0）“：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _syscall0(type,name) \</span></span><br><span class="line">type name(void) \</span><br><span class="line">&#123; \</span><br><span class="line"><span class="keyword">long</span> __res; \</span><br><span class="line">__<span class="function">asm__ <span class="title">volatile</span> <span class="params">(<span class="string">"int $0x80"</span> \</span></span></span><br><span class="line"><span class="function"><span class="params">	: <span class="string">"=a"</span> (__res) \</span></span></span><br><span class="line"><span class="function"><span class="params">	: <span class="string">"0"</span> (__NR_##name))</span></span>; \</span><br><span class="line"><span class="keyword">if</span> (__res &gt;= <span class="number">0</span>) \</span><br><span class="line">	<span class="keyword">return</span> (type) __res; \</span><br><span class="line">errno = -__res; \</span><br><span class="line"><span class="keyword">return</span> <span class="number">-1</span>; \</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>int 0x80执行路线很长，大致线路如下图：</p>
-<p><img src="/.com//Users\我的电脑\AppData\Roaming\Typora\typora-user-images\image-20191027194859638.png" alt="image-20191027194859638"></p>
+<p><img src="//yoursite.com/2019/10/31/操作系统思考题/Users\我的电脑\AppData\Roaming\Typora\typora-user-images\image-20191027194859638.png" alt="image-20191027194859638"></p>
 <p>_res的值就是eax，是copy_process()的返回值last_pid(1)，即 _res值是1，所以return（type） _res将1返回，！1为假，跳过init（）直接执行了for(;;) pause()。</p>
 <p>（2）第二次执行fork代码：ljmp通过CPU任务门机制自动将进程1的TSS的值恢复给CPU，自然将其中的tss.eip恢复给CPU。现在CPU中的EIP指向的就是fork中的if（_res &gt;= 0）这一行，所以进程1要从这一行开始执行。</p>
 <p>此时的_res值就是就是进程1的TSS中的eax的值，为固定值0，所以return（type） _res返回0，！0为真，执行init（）。</p>
