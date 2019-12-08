@@ -108,24 +108,31 @@
 
 
 
-  <meta name="description" content="hello.c文件  12345#include &amp;lt;stdio.h&amp;gt;void hello() &amp;#123;    printf(&amp;quot;Hello World!\n&amp;quot;);&amp;#125;  hello.h头文件  1void hello();  编译生成libhello.so文件  1gcc hello.c -fPIC -shared -o libhello.so  hel">
+  <meta name="description" content="数据的表示和存储1.数制和编码 2.定点数的编码表示移码？ 补码，模运算。   一个负数的的补码等于模（2^n）加该负数。  （各位取反，末位加一）  算盘：n档即n位十进制。 3.C语言中的整数若同时有无符号数和有符号整数，则C编译器将带符号整数强制转换成无符号数。  4.浮点数的编码表示 IEEE754：机器数和真值之间的转换。 阶码全1表示无穷大，浮点数/0结果是+/-无穷大，而不是溢出异常">
+<meta name="keywords" content="《深入理解计算机系统》学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GO语言调用C语言动态库">
-<meta property="og:url" content="http://yoursite.com/2019/04/01/GO语言调用C语言动态库/index.html">
+<meta property="og:title" content="深入理解计算机系统-3">
+<meta property="og:url" content="http://yoursite.com/2019/11/15/深入理解计算机系统-3/index.html">
 <meta property="og:site_name" content="My Blog">
-<meta property="og:description" content="hello.c文件  12345#include &amp;lt;stdio.h&amp;gt;void hello() &amp;#123;    printf(&amp;quot;Hello World!\n&amp;quot;);&amp;#125;  hello.h头文件  1void hello();  编译生成libhello.so文件  1gcc hello.c -fPIC -shared -o libhello.so  hel">
+<meta property="og:description" content="数据的表示和存储1.数制和编码 2.定点数的编码表示移码？ 补码，模运算。   一个负数的的补码等于模（2^n）加该负数。  （各位取反，末位加一）  算盘：n档即n位十进制。 3.C语言中的整数若同时有无符号数和有符号整数，则C编译器将带符号整数强制转换成无符号数。  4.浮点数的编码表示 IEEE754：机器数和真值之间的转换。 阶码全1表示无穷大，浮点数/0结果是+/-无穷大，而不是溢出异常">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-01T07:38:40.523Z">
+<meta property="og:image" content="http://yoursite.com/2019/11/15/深入理解计算机系统-3/3-1">
+<meta property="og:image" content="http://yoursite.com/2019/11/15/深入理解计算机系统-3/3-2">
+<meta property="og:image" content="http://yoursite.com/2019/11/15/深入理解计算机系统-3/3-3">
+<meta property="og:image" content="http://yoursite.com/2019/11/15/深入理解计算机系统-3/3-4">
+<meta property="og:image" content="http://yoursite.com/2019/11/15/深入理解计算机系统-3/3-5">
+<meta property="og:updated_time" content="2019-12-08T07:06:09.245Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GO语言调用C语言动态库">
-<meta name="twitter:description" content="hello.c文件  12345#include &amp;lt;stdio.h&amp;gt;void hello() &amp;#123;    printf(&amp;quot;Hello World!\n&amp;quot;);&amp;#125;  hello.h头文件  1void hello();  编译生成libhello.so文件  1gcc hello.c -fPIC -shared -o libhello.so  hel">
+<meta name="twitter:title" content="深入理解计算机系统-3">
+<meta name="twitter:description" content="数据的表示和存储1.数制和编码 2.定点数的编码表示移码？ 补码，模运算。   一个负数的的补码等于模（2^n）加该负数。  （各位取反，末位加一）  算盘：n档即n位十进制。 3.C语言中的整数若同时有无符号数和有符号整数，则C编译器将带符号整数强制转换成无符号数。  4.浮点数的编码表示 IEEE754：机器数和真值之间的转换。 阶码全1表示无穷大，浮点数/0结果是+/-无穷大，而不是溢出异常">
+<meta name="twitter:image" content="http://yoursite.com/2019/11/15/深入理解计算机系统-3/3-1">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/01/GO语言调用C语言动态库/">
+  <link rel="canonical" href="http://yoursite.com/2019/11/15/深入理解计算机系统-3/">
 
 
 
@@ -135,7 +142,7 @@
   };
 </script>
 
-  <title>GO语言调用C语言动态库 | My Blog</title>
+  <title>深入理解计算机系统-3 | My Blog</title>
   
 
 
@@ -300,7 +307,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/01/GO语言调用C语言动态库/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/15/深入理解计算机系统-3/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wang Jian">
@@ -317,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">GO语言调用C语言动态库
+          <h1 class="post-title" itemprop="name headline">深入理解计算机系统-3
               
             
           </h1>
@@ -342,12 +349,24 @@
                 
               
 
-              <time title="创建时间：2019-04-01 10:40:34 / 修改时间：15:38:40" itemprop="dateCreated datePublished" datetime="2019-04-01T10:40:34+08:00">2019-04-01</time>
+              <time title="创建时间：2019-11-15 15:03:18" itemprop="dateCreated datePublished" datetime="2019-11-15T15:03:18+08:00">2019-11-15</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-08 15:06:09" itemprop="dateModified" datetime="2019-12-08T15:06:09+08:00">2019-12-08</time>
               
             
           </span>
@@ -380,36 +399,22 @@
       
 
       
-        <ol>
-<li><strong>hello.c文件</strong></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">void hello() &#123;</span><br><span class="line">    printf(&quot;Hello World!\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li><strong>hello.h头文件</strong></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void hello();</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li><strong>编译生成libhello.so文件</strong></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc hello.c -fPIC -shared -o libhello.so</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li><p><strong>hello.go文件</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">#cgo CFLAGS: -I./</span><br><span class="line">#cgo LDFLAGS: -L./ -lhello</span><br><span class="line">#include &quot;hello.h&quot; //非标准c头文件，所以用引号</span><br><span class="line">*/</span><br><span class="line">import &quot;C&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">    C.hello()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>CFLAGS中的-I（大写的i） 参数表示.h头文件所在的路径；</p>
-<p>LDFLAGS中的-L(大写的L) 表示.so文件所在的路径 -l(小写的L) 表示指定该路径下的库名称，比如要使用libhello.so，则只需用-lhello（省略了libhello.so中的lib和.so字符）；</p>
-<p>import “C”与上方字段（/ 和 / 之间）不能有空行，C需要大写。</p>
-</li>
-<li><p><strong>运行hello.go</strong></p>
-</li>
-</ol>
-<p>​    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go run  hello.go</span><br></pre></td></tr></table></figure>
-<p>#<strong>遇到的问题：</strong></p>
-<p> error while loading shared libraries: libhello.so: cannot open shared object file: No such file or directory</p>
-<p>#<strong>解决办法：</strong></p>
-<p>1) 如果共享库文件安装到了/lib或/usr/lib目录下, 那么需执行一下ldconfig命令（ldconfig命令的用途, 主要是在默认搜寻目录(/lib和/usr/lib)以及动态库配置文件/etc/ld.so.conf内所列的目录下, 搜索出可共享的动态链接库(格式如lib<em>.so</em>), 进而创建出动态装入程序(ld.so)所需的连接和缓存文件. 缓存文件默认为/etc/ld.so.cache, 此文件保存已排好序的动态链接库名字列表）。</p>
-<p>2) 如果共享库文件安装到了/usr/local/lib(很多开源的共享库都会安装到该目录下)或其它”非/lib或/usr/lib”目录下, 那么在执行ldconfig命令前, 还要把新共享库目录加入到共享库配置文件/etc/ld.so.conf中, 如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># cat  /etc/ld.so.conf</span><br><span class="line"></span><br><span class="line">include ld.so.conf.d/*.conf</span><br><span class="line"></span><br><span class="line"># echo  &quot;/usr/local/lib&quot; &gt;&gt; /etc/ld.so.conf</span><br><span class="line"></span><br><span class="line"># ldconfig</span><br></pre></td></tr></table></figure>
+        <h1 id="数据的表示和存储"><a href="#数据的表示和存储" class="headerlink" title="数据的表示和存储"></a>数据的表示和存储</h1><h3 id="1-数制和编码"><a href="#1-数制和编码" class="headerlink" title="1.数制和编码"></a>1.数制和编码</h3><p><img src="/2019/11/15/深入理解计算机系统-3/3-1" alt="image-20191127191815514"></p>
+<h3 id="2-定点数的编码表示"><a href="#2-定点数的编码表示" class="headerlink" title="2.定点数的编码表示"></a>2.定点数的编码表示</h3><p>移码？</p>
+<p>补码，模运算。</p>
+<p>  一个负数的的补码等于模（2^n）加该负数。</p>
+<p> （各位取反，末位加一）</p>
+<p><img src="/2019/11/15/深入理解计算机系统-3/3-2" alt="image-20191127203213466"></p>
+<p>算盘：n档即n位十进制。</p>
+<h3 id="3-C语言中的整数"><a href="#3-C语言中的整数" class="headerlink" title="3.C语言中的整数"></a>3.C语言中的整数</h3><p>若同时有无符号数和有符号整数，则C编译器将带符号整数强制转换成无符号数。</p>
+<p><img src="/2019/11/15/深入理解计算机系统-3/3-3" alt="image-20191127204845962"></p>
+<h3 id="4-浮点数的编码表示"><a href="#4-浮点数的编码表示" class="headerlink" title="4.浮点数的编码表示"></a>4.浮点数的编码表示</h3><p><img src="/2019/11/15/深入理解计算机系统-3/3-4" alt="image-20191127212908299"></p>
+<p>IEEE754：机器数和真值之间的转换。</p>
+<p>阶码全1表示无穷大，浮点数/0结果是+/-无穷大，而不是溢出异常。</p>
+<p>0/0=NaN（非数）</p>
+<h3 id="6-数据的基本宽度"><a href="#6-数据的基本宽度" class="headerlink" title="6.数据的基本宽度"></a>6.数据的基本宽度</h3><p>字和字长不同：1个字=2个字节（IA-32），16位；字长指数据通路的宽度。</p>
+<h3 id="7-数据存储时的字节顺序"><a href="#7-数据存储时的字节顺序" class="headerlink" title="7.数据存储时的字节顺序"></a>7.数据存储时的字节顺序</h3><p>大端方式，小端方式（IA-32）。</p>
+<p><img src="/2019/11/15/深入理解计算机系统-3/3-5" alt="image-20191127220919501"></p>
 
       
     </div>
@@ -431,6 +436,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/《深入理解计算机系统》学习笔记/" rel="tag"># 《深入理解计算机系统》学习笔记</a>
+          
+        </div>
+      
 
       
       
@@ -440,8 +451,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/27/用openssl制作Chrome信任的自签名证书/" rel="next" title="用openssl制作Chrome信任的自签名证书">
-                <i class="fa fa-chevron-left"></i> 用openssl制作Chrome信任的自签名证书
+              <a href="/2019/11/08/深入理解计算机系统-2/" rel="next" title="深入理解计算机系统-2">
+                <i class="fa fa-chevron-left"></i> 深入理解计算机系统-2
               </a>
             
           </div>
@@ -450,8 +461,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/31/C语言里的那些不得不说的事情/" rel="prev" title="C语言里的那些不得不说的事情">
-                C语言里的那些不得不说的事情 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/18/操作系统导论-1/" rel="prev" title="操作系统导论-1">
+                操作系统导论-1 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -497,8 +508,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -557,6 +577,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据的表示和存储"><span class="nav-number">1.</span> <span class="nav-text">数据的表示和存储</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-数制和编码"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.数制和编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-定点数的编码表示"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.定点数的编码表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-C语言中的整数"><span class="nav-number">1.0.3.</span> <span class="nav-text">3.C语言中的整数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-浮点数的编码表示"><span class="nav-number">1.0.4.</span> <span class="nav-text">4.浮点数的编码表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-数据的基本宽度"><span class="nav-number">1.0.5.</span> <span class="nav-text">6.数据的基本宽度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-数据存储时的字节顺序"><span class="nav-number">1.0.6.</span> <span class="nav-text">7.数据存储时的字节顺序</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
