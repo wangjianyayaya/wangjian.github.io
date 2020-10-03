@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="1.递归方法简单，但是没有想到。 递归表达式：  12345678910111213141516171819class Solution &amp;#123;public:    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) &amp;#123;        if(l1==nullptr)            return l2;        if(">
+  <meta name="description" content="递归方法简单，但是没有想到。 递归表达式：  12345678910111213141516171819class Solution &amp;#123;public:    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) &amp;#123;        if(l1==nullptr)            return l2;        if(l2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="leetcode-21 merge two sorted lists C++详解">
 <meta property="og:url" content="http://yoursite.com/2020/10/03/leetcode-21-merge-two-sorted-lists-C-详解/index.html">
 <meta property="og:site_name" content="My Blog">
-<meta property="og:description" content="1.递归方法简单，但是没有想到。 递归表达式：  12345678910111213141516171819class Solution &amp;#123;public:    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) &amp;#123;        if(l1==nullptr)            return l2;        if(">
+<meta property="og:description" content="递归方法简单，但是没有想到。 递归表达式：  12345678910111213141516171819class Solution &amp;#123;public:    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) &amp;#123;        if(l1==nullptr)            return l2;        if(l2">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2020/10/03/leetcode-21-merge-two-sorted-lists-C-详解/1">
-<meta property="og:updated_time" content="2020-10-03T12:55:20.695Z">
+<meta property="og:updated_time" content="2020-10-03T13:01:52.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode-21 merge two sorted lists C++详解">
-<meta name="twitter:description" content="1.递归方法简单，但是没有想到。 递归表达式：  12345678910111213141516171819class Solution &amp;#123;public:    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) &amp;#123;        if(l1==nullptr)            return l2;        if(">
+<meta name="twitter:description" content="递归方法简单，但是没有想到。 递归表达式：  12345678910111213141516171819class Solution &amp;#123;public:    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) &amp;#123;        if(l1==nullptr)            return l2;        if(l2">
 <meta name="twitter:image" content="http://yoursite.com/2020/10/03/leetcode-21-merge-two-sorted-lists-C-详解/1">
 
 
@@ -344,7 +344,7 @@
                 
               
 
-              <time title="创建时间：2020-10-03 20:24:05 / 修改时间：20:55:20" itemprop="dateCreated datePublished" datetime="2020-10-03T20:24:05+08:00">2020-10-03</time>
+              <time title="创建时间：2020-10-03 20:24:05 / 修改时间：21:01:52" itemprop="dateCreated datePublished" datetime="2020-10-03T20:24:05+08:00">2020-10-03</time>
             
 
             
@@ -382,13 +382,13 @@
       
 
       
-        <h2 id="1-递归"><a href="#1-递归" class="headerlink" title="1.递归"></a>1.递归</h2><p>方法简单，但是没有想到。</p>
+        <h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>方法简单，但是没有想到。</p>
 <p>递归表达式：</p>
 <p><img src="/2020/10/03/leetcode-21-merge-two-sorted-lists-C-详解/1" alt="image-20201003204508785"></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">mergeTwoLists</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(l1==<span class="literal">nullptr</span>)</span><br><span class="line">            <span class="keyword">return</span> l2;</span><br><span class="line">        <span class="keyword">if</span>(l2==<span class="literal">nullptr</span>)</span><br><span class="line">            <span class="keyword">return</span> l1;</span><br><span class="line">        <span class="keyword">if</span>(l1-&gt;val &lt; l2-&gt;val)</span><br><span class="line">        &#123;   </span><br><span class="line">            l1-&gt;next = mergeTwoLists(l1-&gt;next,l2);</span><br><span class="line">            <span class="keyword">return</span> l1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;    </span><br><span class="line">            l2-&gt;next = mergeTwoLists(l1,l2-&gt;next);</span><br><span class="line">            <span class="keyword">return</span> l2;</span><br><span class="line">        &#125;    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>时间复杂度：O（m+n）<br>空间复杂度：O（m+n）,递归需要叠加栈</p>
-<h2 id="2-迭代"><a href="#2-迭代" class="headerlink" title="2.迭代"></a>2.迭代</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">mergeTwoLists</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</span><br><span class="line">        ListNode* pre_head = <span class="keyword">new</span> ListNode&#123;<span class="number">-1</span>,&#125;;</span><br><span class="line">        ListNode* pre = pre_head;</span><br><span class="line">        <span class="keyword">while</span>(l1!=<span class="literal">nullptr</span> &amp;&amp; l2!=<span class="literal">nullptr</span>)</span><br><span class="line">           <span class="keyword">if</span>(l1-&gt;val &lt; l2-&gt;val)</span><br><span class="line">            &#123;</span><br><span class="line">                pre-&gt;next=l1;</span><br><span class="line">                pre=l1;</span><br><span class="line">                l1=l1-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                pre-&gt;next=l2;</span><br><span class="line">                pre=l2;</span><br><span class="line">                l2=l2-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">if</span>(l1 == <span class="literal">nullptr</span>)</span><br><span class="line">            pre-&gt;next=l2;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            pre-&gt;next=l1;</span><br><span class="line">           </span><br><span class="line">        <span class="keyword">return</span> pre_head-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>时间复杂度：O（m+n）<br>空间复杂度O(1)<br>注意：哨兵节点/哑节点</p>
+<h2 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">mergeTwoLists</span><span class="params">(ListNode* l1, ListNode* l2)</span> </span>&#123;</span><br><span class="line">        ListNode* pre_head = <span class="keyword">new</span> ListNode&#123;<span class="number">-1</span>,&#125;;</span><br><span class="line">        ListNode* pre = pre_head;</span><br><span class="line">        <span class="keyword">while</span>(l1!=<span class="literal">nullptr</span> &amp;&amp; l2!=<span class="literal">nullptr</span>)</span><br><span class="line">           <span class="keyword">if</span>(l1-&gt;val &lt; l2-&gt;val)</span><br><span class="line">            &#123;</span><br><span class="line">                pre-&gt;next=l1;</span><br><span class="line">                pre=l1;</span><br><span class="line">                l1=l1-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                pre-&gt;next=l2;</span><br><span class="line">                pre=l2;</span><br><span class="line">                l2=l2-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">if</span>(l1 == <span class="literal">nullptr</span>)</span><br><span class="line">            pre-&gt;next=l2;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            pre-&gt;next=l1;</span><br><span class="line">           </span><br><span class="line">        <span class="keyword">return</span> pre_head-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：O（m+n）<br>空间复杂度：O(1)<br>注意：哨兵节点/哑节点</p>
 
       
     </div>
@@ -428,6 +428,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/10/03/leetcode-26-Remove-Duplicates-from-Sorted-Array-C-详解/" rel="prev" title="leetcode-26 Remove Duplicates from Sorted Array C++详解">
+                leetcode-26 Remove Duplicates from Sorted Array C++详解 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -499,7 +503,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -551,7 +555,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-递归"><span class="nav-number">1.</span> <span class="nav-text">1.递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-迭代"><span class="nav-number">2.</span> <span class="nav-text">2.迭代</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#递归"><span class="nav-number">1.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迭代"><span class="nav-number">2.</span> <span class="nav-text">迭代</span></a></li></ol></div>
             
 
           </div>

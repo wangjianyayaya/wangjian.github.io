@@ -108,30 +108,24 @@
 
 
 
-  <meta name="description" content="​        QUIC（Quick  UDP  Internet  Connections），最早由Google提出（gQUIC），后交由IETF进一步发展（iQUIC），在 2018 年  11 月 8 日的 IETF-103 HTTPbis 会议上确认 iQUIC新名称是 HTTP／3。HTTP／3 就是使用 QUIC 进行传输的新 HTTP 版本！ ​        产生背景：​">
+  <meta name="description" content="方法一：受上一题启发，这题非常快解决。 123456789101112131415class Solution &amp;#123;public:    int removeElement(vector&amp;lt;int&amp;gt;&amp;amp; nums, int val) &amp;#123;        int size=nums.size();        int count=0;        for(int">
 <meta property="og:type" content="article">
-<meta property="og:title" content="好记性不如烂笔头之QUIC学习笔记">
-<meta property="og:url" content="http://yoursite.com/2018/12/17/好记性不如烂笔头之QUIC学习笔记/index.html">
+<meta property="og:title" content="leetcode-27 Remove Element C++详解">
+<meta property="og:url" content="http://yoursite.com/2020/10/03/leetcode-27-Remove-Element-C-详解/index.html">
 <meta property="og:site_name" content="My Blog">
-<meta property="og:description" content="​        QUIC（Quick  UDP  Internet  Connections），最早由Google提出（gQUIC），后交由IETF进一步发展（iQUIC），在 2018 年  11 月 8 日的 IETF-103 HTTPbis 会议上确认 iQUIC新名称是 HTTP／3。HTTP／3 就是使用 QUIC 进行传输的新 HTTP 版本！ ​        产生背景：​">
+<meta property="og:description" content="方法一：受上一题启发，这题非常快解决。 123456789101112131415class Solution &amp;#123;public:    int removeElement(vector&amp;lt;int&amp;gt;&amp;amp; nums, int val) &amp;#123;        int size=nums.size();        int count=0;        for(int">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://blog.cloudflare.com/content/images/2018/07/QUIC-Badge-Dark-RGB-Horiz.png">
-<meta property="og:image" content="https://static001.infoq.cn/resource/image/99/28/990527acaef2cb0cd1b3da52bf08a928.png">
-<meta property="og:image" content="https://static001.infoq.cn/resource/image/cb/53/cbccfb0eec8c8115137778e08ef36353.png">
-<meta property="og:image" content="https://pic2.zhimg.com/v2-8db4c3c378edaac0060b4238e3554091_r.jpg">
-<meta property="og:image" content="https://pic2.zhimg.com/v2-086cc0ac3b95eb5bfe84a2d87bb2a645_r.jpg">
-<meta property="og:updated_time" content="2019-12-08T07:29:21.847Z">
+<meta property="og:updated_time" content="2020-10-03T14:05:48.253Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="好记性不如烂笔头之QUIC学习笔记">
-<meta name="twitter:description" content="​        QUIC（Quick  UDP  Internet  Connections），最早由Google提出（gQUIC），后交由IETF进一步发展（iQUIC），在 2018 年  11 月 8 日的 IETF-103 HTTPbis 会议上确认 iQUIC新名称是 HTTP／3。HTTP／3 就是使用 QUIC 进行传输的新 HTTP 版本！ ​        产生背景：​">
-<meta name="twitter:image" content="https://blog.cloudflare.com/content/images/2018/07/QUIC-Badge-Dark-RGB-Horiz.png">
+<meta name="twitter:title" content="leetcode-27 Remove Element C++详解">
+<meta name="twitter:description" content="方法一：受上一题启发，这题非常快解决。 123456789101112131415class Solution &amp;#123;public:    int removeElement(vector&amp;lt;int&amp;gt;&amp;amp; nums, int val) &amp;#123;        int size=nums.size();        int count=0;        for(int">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/17/好记性不如烂笔头之QUIC学习笔记/">
+  <link rel="canonical" href="http://yoursite.com/2020/10/03/leetcode-27-Remove-Element-C-详解/">
 
 
 
@@ -141,7 +135,7 @@
   };
 </script>
 
-  <title>好记性不如烂笔头之QUIC学习笔记 | My Blog</title>
+  <title>leetcode-27 Remove Element C++详解 | My Blog</title>
   
 
 
@@ -306,7 +300,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/17/好记性不如烂笔头之QUIC学习笔记/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/03/leetcode-27-Remove-Element-C-详解/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wang Jian">
@@ -323,7 +317,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">好记性不如烂笔头之QUIC学习笔记
+          <h1 class="post-title" itemprop="name headline">leetcode-27 Remove Element C++详解
               
             
           </h1>
@@ -348,24 +342,12 @@
                 
               
 
-              <time title="创建时间：2018-12-17 15:23:45" itemprop="dateCreated datePublished" datetime="2018-12-17T15:23:45+08:00">2018-12-17</time>
+              <time title="创建时间：2020-10-03 21:34:15 / 修改时间：22:05:48" itemprop="dateCreated datePublished" datetime="2020-10-03T21:34:15+08:00">2020-10-03</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-12-08 15:29:21" itemprop="dateModified" datetime="2019-12-08T15:29:21+08:00">2019-12-08</time>
               
             
           </span>
@@ -398,28 +380,13 @@
       
 
       
-        <p>​        QUIC（Quick  UDP  Internet  Connections），最早由Google提出（gQUIC），后交由IETF进一步发展（iQUIC），在 2018 年  11 月 8 日的 IETF-103 HTTPbis 会议上确认 iQUIC新名称是 HTTP／3。HTTP／3 就是使用 QUIC 进行传输的新 HTTP 版本！</p>
-<p>​       <img src="https://blog.cloudflare.com/content/images/2018/07/QUIC-Badge-Dark-RGB-Horiz.png" alt="QUIC-Badge-Dark-RGB-Horiz"></p>
-<h2 id="产生背景："><a href="#产生背景：" class="headerlink" title="产生背景："></a><strong>产生背景：</strong></h2><p>​        <em>TCP的瓶颈：</em>  TCP由于基于操作系统内核实现，发展速度极慢，现有的TCP Fast Open实现等等虽然早已存在于标准中但是实际应用情况及其落后，即便除非所有机器的操作系统都更新到最新，否则考虑到兼容性不太可能大范围采用新技术。QUIC直接基于客户端实现，而非基于系统内核，可以进行快速迭代更新，不需要操作系统内核层面的更改。</p>
-<p>​         <em>HTTP2.0队头阻塞：</em>   虽然实现了多路复用，但也因此出现了队头阻塞的问题。而队头阻塞主要是 TCP 协议的可靠性机制引入的。TCP 使用序列号来标识数据的顺序，数据必须按照顺序处理，如果前面的数据丢失，后面的数据就算到达了也不会通知应用层来处理。</p>
-<p>​         QUIC 协议的主要目的，是为了整合 TCP 协议的可靠性和 UDP 协议的速度和效率。</p>
-<h2 id="特性："><a href="#特性：" class="headerlink" title="特性："></a><strong>特性：</strong></h2><h3 id="内置安全加密，减少握手时间，可实现0-RTT的握手过程"><a href="#内置安全加密，减少握手时间，可实现0-RTT的握手过程" class="headerlink" title="内置安全加密，减少握手时间，可实现0-RTT的握手过程"></a><strong>内置安全加密，减少握手时间，可实现0-RTT的握手过程</strong></h3><p>​        TCP 协议头部没有经过任何加密和认证，所以在传输过程中很容易被中间网络设备篡改，注入和窃听。但是 QUIC 的 packet 除了个别报文，所有报文头部都是经过认证的。只要对 QUIC 报文任何修改，接收端都能够及时发现，有效地降低了安全风险。</p>
-<p><img src="https://static001.infoq.cn/resource/image/99/28/990527acaef2cb0cd1b3da52bf08a928.png" alt="img"></p>
-<p>​                                                                             <strong>TCP+TLS1.3+HTTP2</strong></p>
-<p><img src="https://static001.infoq.cn/resource/image/cb/53/cbccfb0eec8c8115137778e08ef36353.png" alt="img"></p>
-<p>​                                                                                 <strong>QUIC</strong></p>
-<p>​        0 RTT 的效果是因为QUIC的客户端会缓存服务器端发的令牌和证书，当有数据需要再次发送的时候，客户端可以直接使用旧的令牌和证书，这样就实现了 0 RTT 了。当令牌失效或者没有缓存的情况下，QUIC还是需要一次握手才能开始传输数据。</p>
-<h3 id="改进的拥塞控制"><a href="#改进的拥塞控制" class="headerlink" title="改进的拥塞控制"></a>改进的拥塞控制</h3><p>​         QUIC 的拥塞控制主要实现了 TCP 的慢启动，拥塞避免，快重传，快恢复。在这些拥塞控制算法的基础上，再进行改进。</p>
-<p>​        <em>单调递增的 Packet Number：</em>  QUIC 是一个可靠的协议，它使用 Packet Number 代替了 TCP 的 sequence number，并且每个 Packet Number 都严格递增，也就是说就算 Packet N 丢失了，重传的 Packet N 的 Packet Number 已经不是 N，而是一个比 N 大的值。而 TCP 呢，重传 segment 的 sequence number 和原始的 segment 的 Sequence Number 保持不变，也正是由于这个特性，引入了 TCP 重传的歧义问题。</p>
-<p>​         <img src="https://pic2.zhimg.com/v2-8db4c3c378edaac0060b4238e3554091_r.jpg" alt="preview"></p>
-<p>​                                                                   <strong>TCP重传歧义</strong></p>
-<p><img src="https://pic2.zhimg.com/v2-086cc0ac3b95eb5bfe84a2d87bb2a645_r.jpg" alt="preview"></p>
-<p>​                                                                        <strong>QUIC重传没有歧义</strong></p>
-<p>​        而重传歧义会导致采样RRT的计算出现问题。</p>
-<h3 id="没有队头阻塞的多路复用"><a href="#没有队头阻塞的多路复用" class="headerlink" title="没有队头阻塞的多路复用"></a><strong>没有队头阻塞的多路复用</strong></h3><p>​         QUIC 的多路复用和 HTTP2 类似。在一条 QUIC 连接上可以并发发送多个 HTTP 请求 (stream)。但是 QUIC 的多路复用相比 HTTP2 有一个很大的优势。</p>
-<p>​         QUIC 因为是基于UDP的协议，一个连接上的多个 stream 之间没有依赖。这样假如 stream2 丢了一个 udp packet，也只会影响 stream2 的处理。不会影响 stream2 之前及之后的 stream 的处理。</p>
-<h3 id="前向纠错"><a href="#前向纠错" class="headerlink" title="前向纠错"></a><strong>前向纠错</strong></h3><p>​        QUIC使用了FEC(前向纠错码)来恢复数据，FEC采用简单异或的方式。前向纠错牺牲了每个数据包可以发送数据的上限，但是减少了因为丢包导致的数据重传，因为数据重传将会消耗更多的时间。</p>
-<h3 id="连接迁移"><a href="#连接迁移" class="headerlink" title="连接迁移"></a><strong>连接迁移</strong></h3><p>​        一条 TCP 连接是由四元组标识的（源 IP，源端口，目的 IP，目的端口）。当我们使用手机在 WIFI 和 4G 移动网络切换时，客户端的 IP 肯定会发生变化，就需要重新建立和服务端的 TCP 连接。而 QUIC 连接不再以 IP 及端口四元组标识，而是以一个 64 位的随机数作为Connection ID 来标识，这样就算 IP 或者端口发生变化时，只要Connection ID 不变，这条连接依然维持着，上层业务逻辑感知不到变化，也不需要重连。</p>
+        <h2 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h2><p>受上一题启发，这题非常快解决。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> size=nums.size();</span><br><span class="line">        <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;size;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i]==val)</span><br><span class="line">               count++;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">               nums[i-count]=nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> size-count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：O（n）</p>
+<p>空间复杂度：O（1）</p>
+<p>区别：T26一步一步交换，T27一步完成交换。</p>
+<h2 id="官方解答之双指针："><a href="#官方解答之双指针：" class="headerlink" title="官方解答之双指针："></a>官方解答之双指针：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> slowIndex = <span class="number">0</span>; </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> fastIndex = <span class="number">0</span>; fastIndex &lt; nums.size(); fastIndex++) &#123;  </span><br><span class="line">            <span class="keyword">if</span> (val != nums[fastIndex]) &#123; </span><br><span class="line">                nums[slowIndex++] = nums[fastIndex]; </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> slowIndex;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>时间复杂度：O(n)<br>空间复杂度：O(1)</p>
 
       
     </div>
@@ -450,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/05/你好/" rel="next" title="你好">
-                <i class="fa fa-chevron-left"></i> 你好
+              <a href="/2020/10/03/leetcode-26-Remove-Duplicates-from-Sorted-Array-C-详解/" rel="next" title="leetcode-26 Remove Duplicates from Sorted Array C++详解">
+                <i class="fa fa-chevron-left"></i> leetcode-26 Remove Duplicates from Sorted Array C++详解
               </a>
             
           </div>
@@ -460,8 +427,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/27/用openssl制作Chrome信任的自签名证书/" rel="prev" title="用openssl制作Chrome信任的自签名证书">
-                用openssl制作Chrome信任的自签名证书 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/10/03/leetcode-28-Implement-strStr-C-详解/" rel="prev" title="leetcode-28  Implement strStr C++详解">
+                leetcode-28  Implement strStr C++详解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -586,7 +553,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#产生背景："><span class="nav-number">1.</span> <span class="nav-text">产生背景：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特性："><span class="nav-number">2.</span> <span class="nav-text">特性：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内置安全加密，减少握手时间，可实现0-RTT的握手过程"><span class="nav-number">2.1.</span> <span class="nav-text">内置安全加密，减少握手时间，可实现0-RTT的握手过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改进的拥塞控制"><span class="nav-number">2.2.</span> <span class="nav-text">改进的拥塞控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#没有队头阻塞的多路复用"><span class="nav-number">2.3.</span> <span class="nav-text">没有队头阻塞的多路复用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前向纠错"><span class="nav-number">2.4.</span> <span class="nav-text">前向纠错</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连接迁移"><span class="nav-number">2.5.</span> <span class="nav-text">连接迁移</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一："><span class="nav-number">1.</span> <span class="nav-text">方法一：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#官方解答之双指针："><span class="nav-number">2.</span> <span class="nav-text">官方解答之双指针：</span></a></li></ol></div>
             
 
           </div>
